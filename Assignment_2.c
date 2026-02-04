@@ -14,4 +14,21 @@ int main() {
     scanf("%f",&num1);
     scanf("%f",&num2);
     scanf("%d",&ch);
-    
+    switch(ch) {
+        case 1:
+        printf("addition:%.2f\n",num1+num2);
+        break;
+        case 2:
+        printf("subtraction%.2f\n",num1-num2);
+        break;
+        case 3: 
+        printf("multiplication%.2f\n",num1*num2);
+        break;
+        case 4:
+        printf("division%.2f\n",num1/num2);
+        break;
+        default:
+        printf("wrong input");
+    }
+    return 0;
+}
