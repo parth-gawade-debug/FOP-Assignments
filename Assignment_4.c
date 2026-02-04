@@ -5,3 +5,11 @@ int main() {
     printf("enter the basic salary:");
     scanf("%f",&basic_salary);
     
+    HRA = 0.2 * basic_salary;
+    TA = 0.1 * basic_salary;
+    gross_salary = basic_salary + HRA + TA;
+    PT =gross_salary * 0.05;
+    net_salary = gross_salary - PT;
+    printf("net_salary:%.2f\n",net_salary);
+    return 0;
+}
