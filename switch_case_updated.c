@@ -1,53 +1,62 @@
 #include <stdio.h>
 #include <math.h>
+
+// Function declaration
+int factorial(int num);
+
 int main() {
-    float num1;
-    float num2;
+    float num1, num2, result;
     int ch;
-    float result;
-    float factorial(float num1) {
-        if(num1==0) {
-            return 1;
-        }
-        else {
-            return num1*factorial(num1-1);
-        }
-    }
-    result=pow(num1,num2);
-
-
+    
     printf("-------menu-------\n");
     printf("press 1 for addition\n");
     printf("press 2 for subtraction\n");
     printf("press 3 for multiplication\n");
     printf("press 4 for division\n");
-    printf("enter your preference:");
-
-    scanf("%f",&num1);
-    scanf("%f",&num2);
-    scanf("%d",&ch);
-
+    printf("press 5 for power\n");
+    printf("press 6 for factorial\n");
+    printf("enter your preference: ");
+    scanf("%d", &ch);
+    
+    printf("Enter two numbers: ");
+    scanf("%f %f", &num1, &num2);
+    
     switch(ch) {
         case 1:
-        printf("addition:%.2f\n",num1+num2);
-        break;
+            printf("addition: %.2f\n", num1 + num2);
+            break;
         case 2:
-        printf("subtraction%.2f\n",num1-num2);
-        break;
-        case 3: 
-        printf("multiplication%.2f\n",num1*num2);
-        break;
+            printf("subtraction: %.2f\n", num1 - num2);
+            break;
+        case 3:
+            printf("multiplication: %.2f\n", num1 * num2);
+            break;
         case 4:
-        printf("division%.2f\n",num1/num2);
-        break;
+            if(num2 == 0) {
+                printf("division by zero is not possible\n");
+            } else {
+                printf("division: %.2f\n", num1 / num2);
+            }
+            break;
         case 5:
-        printf("power:%.2f\n",result);
-        break;
+            result = pow(num1, num2);
+            printf("power: %.2f\n", result);
+            break;
         case 6:
-        printf("factorial:%.2f\n",factorial(num1));
-        break;
+            printf("factorial: %d\n", factorial((int)num1));
+            break;
         default:
-        printf("wrong input");
+            printf("wrong input\n");
     }
+    
     return 0;
+}
+
+
+int factorial(int num) {
+    if(num == 0 || num == 1) {
+        return 1;
+    } else {
+        return num * factorial(num - 1);
+    }
 }
