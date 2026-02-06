@@ -1,4 +1,5 @@
 // program to check whether a number is an Armstrong number or not.
+// armstrong number is a number that is equal to the sum of the cubes of its digits. For example, 153 is an Armstrong number because 1^3 + 5^3 + 3^3 = 153.
 #include<stdio.h>
 int main() {
     int temp,num,sum=0,digit;
