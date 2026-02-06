@@ -17,4 +17,18 @@ int main() {
     printf("Percentage: %.2f\n", percentage);
     if(percentage >= 75) {
         printf("Distinction\n");
+    }
+    else if(percentage >=60 && percentage < 75) {
+        printf("First Class\n");
+    }
+    else if(percentage >=50 && percentage < 60) {
+        printf("Second Class\n");
+    }
+    else if(percentage >=40 && percentage < 50) {
+        printf("Third Class\n");
+    }
+    else {
+        printf("Fail\n");
+    }
+    return 0;
 }
