@@ -11,7 +11,7 @@ int prime_factors(int n) {
     printf("Prime factors of %d are: ", n);
     for(int i = 2; i <= n; i++) {
         while(n % i == 0) {
-            printf("%d ", i);
+            printf("%d, ", i);
             n /= i;
         }
     }
@@ -24,7 +24,7 @@ int main() {
     printf("Square of %d is: %d\n", num, num*num);
 
     printf("Square root of %d is: %.2f\n", num, sqrt(num));
-    printf("Cube of %d is: %d\n", num, num*num*num);
+    printf("Cube of %d is: %ld\n", num, (long)num*num*num);
 
     printf("Cube root of %d is: %.2f\n", num, cbrt(num));
     printf("Factorial of %d is: %d\n", num, factorial(num));
