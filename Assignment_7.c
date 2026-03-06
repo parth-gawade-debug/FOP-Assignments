@@ -1,23 +1,35 @@
-//this program calculates the average marks of three students.
+// This program demonstrates the use of structures in C to represent a student and their information.
 #include <stdio.h>
+
 int main() {
-    float marks1, marks2, marks3, average;
+    float marks1, marks2, marks3, avg;
+    int roll_no, prn, i;
+    char student_name[50];
 
-    // Input marks for three students
-    printf("Enter marks for student 1: ");
-    scanf("%f", &marks1);
-    
-    printf("Enter marks for student 2: ");
-    scanf("%f", &marks2);
-    
-    printf("Enter marks for student 3: ");
-    scanf("%f", &marks3);
+    for (i = 1; i <= 3; i++) {
+        printf("\n--- Student %d ---\n", i);
 
-    // Calculate the average
-    average = (marks1 + marks2 + marks3) / 3;
+        printf("Enter student name: ");
+        scanf("%s", student_name);
 
-    // Output the average
-    printf("The average marks of the three students is: %.2f\n", average);
+        printf("Enter roll number: ");
+        scanf("%d", &roll_no);
+
+        printf("Enter PRN of the student: ");
+        scanf("%d", &prn);
+
+        printf("Enter marks of subject 1: ");
+        scanf("%f", &marks1);
+
+        printf("Enter marks of subject 2: ");
+        scanf("%f", &marks2);
+
+        printf("Enter marks of subject 3: ");
+        scanf("%f", &marks3);
+
+        avg = (marks1 + marks2 + marks3) / 3;
+        printf("Average marks of %s: %.2f\n", student_name, avg);
+    }
 
     return 0;
 }
